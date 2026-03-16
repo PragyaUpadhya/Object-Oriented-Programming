@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class stu{
+   
+    int rollno;
+    char name[50];
+    int eng,hindi,maths,science,sst;
+    float total,per;
+public:
+void get()
+{
+    cout<<"enter your name"<<endl;
+    cin>>name;
+    cout<<"enter your rollno"<<endl;
+    cin>>rollno;
+    cout<<"enter 5 subject marks"<<endl;
+    cin>>eng>>hindi>>maths>>science>>sst;
+}
+void cal()
+{
+  total = eng + hindi + maths + science + sst;
+  per = (total*100)/500;
+}
+void dis()
+{
+    cout<<"name="<<name<<endl;
+    cout<<"rollno="<<rollno<<endl;
+    cout<<"total="<<total<<endl;
+    cout<<"percentage="<<per<<endl;
+}
+};
+int main(){
+    stu a,b,c;
+    a.get();
+    b.get();
+    c.get();
+    a.cal();
+    b.cal();
+    c.cal();
+    a.dis();
+    b.dis();
+    c.dis();
+}
