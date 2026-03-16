@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class perimeter1
+{
+    public:
+    void perimeter(float r)
+    {
+        cout<<"perimeter of circle:"<<2*3.14*r<<endl;
+    }
+    void perimeter (int l , int w)
+    {
+        cout<<"perimeter of rectangle:"<<2*(l*w)<<endl;
+    }
+    void perimeter(int a , int b ,int c)
+    {
+        cout<<"perimeter of triangle:"<<a*b*c<<endl;
+    }
+};
+int main()
+{
+    perimeter1 c,r,t;
+    c.perimeter(5);
+    r.perimeter(4,6);
+    t.perimeter(3,7,8);
+}
