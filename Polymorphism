@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal {
+public:
+    // Virtual function for polymorphism
+    virtual void sound() {
+        cout << "Animal makes a sound" << endl;
+    }
+};
+
+// Derived class Dog
+class Dog : public Animal {
+public:
+    void sound() override {   // override keyword 
+        cout << "Dog barks" << endl;
+    }
+};
+
+// Derived class Cat
+class Cat : public Animal {
+public:
+    void sound() override {
+        cout << "Cat meows" << endl;
+    }
+};
+
+int main() {
+    // Base class pointer pointing to different derived objects
+    Animal* a;
+
+    a = new Dog();
+    a->sound();   // Calls Dog's version
+
+    a = new Cat();
+    a->sound();   // Calls Cat's version
+
+    delete a; // cleanup
+    return 0;
+}
